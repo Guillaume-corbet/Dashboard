@@ -1,0 +1,15 @@
+<div style="background-color: darkgray;">
+    <div id="circle">
+        <%for (let i = 0; i < dataGenre.genres.length; i++) {%>
+            <p><%= dataGenre.genres[i].id%> <%= dataGenre.genres[i].name%></p>
+        <%}%>
+    </div>
+    <%- include('../inputWidget.ejs', {value: "idGenre", nameWidget: "Get Movie by genre", label: 'Id genre'}); %>
+</div>
+<% if (dataMovieByGenre != null && typeof dataMovieByGenre.results != "undefined") {%>
+    <div style="background-color: darkgray; text-align: center;">
+        <% for(let i = 0; i < dataMovieByGenre.results.length; i++) {%>
+            <p> <%= dataMovieByGenre.results[i].original_title %></p>
+        <% } %>
+    </div>
+<%}%>

@@ -1,0 +1,10 @@
+<div style="background-color: aquamarine;">
+    <%- include('../inputWidget.ejs', {value: "releaseDate", nameWidget: "Get Movie by release date", label: "Release date"}); %>
+</div>
+<%if (dataMovieDate != null && typeof dataMovieDate.results != "undefined") {%>
+    <div style="background-color: aquamarine; text-align: center;">
+        <% for(let i = 0; i < dataMovieDate.results.length; i++) {%>
+            <p> <%= dataMovieDate.results[i].original_title %></p>
+        <% } %>
+    </div>
+<%}%>

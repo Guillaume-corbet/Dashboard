@@ -1,0 +1,1 @@
+npm install --save express express-session express-ejs-layouts ejs googleapis google-auth-library mongoose passport bcrypt node-fetch

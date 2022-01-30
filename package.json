@@ -1,0 +1,21 @@
+{
+    "name": "dashboard",
+    "version": "1.0.0",
+    "description": "Docker",
+    "author": "Samuel Parayre <samuel.parayre@epitech.eu>",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1",
+      "express-session": "1.17.1",
+      "express-ejs-layouts": "2.5.0",
+      "connect-flash": "0.1.1",
+      "mongoose": "5.10.15",
+      "bcrypt": "5.0.0",
+      "ejs": "3.1.5",
+      "googleapis": "65.0.0",
+      "node-themoviedb": "0.2.5"
+    }
+  }

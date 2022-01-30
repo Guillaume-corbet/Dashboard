@@ -1,0 +1,9 @@
+<div style="background-color: cyan;">
+    <%- include('../inputWidget.ejs', {value: "idChannel", nameWidget: "Youtube subscriber channel", label: "Id channel"}); %>
+</div>
+<%if (dataSubscriber != null && typeof dataSubscriber.items != "undefined") {%>
+    <div style="background-color: cyan; text-align: center;">
+        <p> <%= dataSubscriber.items[0].snippet.title%></p>
+        <p> <%= dataSubscriber.items[0].statistics.subscriberCount%></p>
+    </div>
+<%}%>

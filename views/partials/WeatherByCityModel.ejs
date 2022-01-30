@@ -1,0 +1,12 @@
+<div style="width: 30%; margin-left: 2%; text-align: center;">
+    <div style="background-color: chocolate;">
+        <%- include('../inputWidget.ejs', {value: "nameCity", nameWidget: "Weather by city", label: "name city"}); %>
+    </div>
+    <%if (dataWeather != null && typeof dataWeather.current != "undefined") {%>
+    <div style="background-color: chocolate;">
+        <p> <%= dataWeather.location.name%></p>
+        <p> temperature : <%= dataWeather.current.temperature%></p>
+        <img src="<%=dataWeather.current.weather_icons[0]%>">
+    </div>
+    <%}%>
+</div>

@@ -1,0 +1,10 @@
+<div style="background-color: darkgreen;">
+    <%- include('../inputWidget.ejs', {value: "idVideoComment", nameWidget: "Youtube video comments", label: "Id video"}); %>
+</div>
+<%if (dataComment != null && typeof dataComment.items != "undefined") {%>
+    <div style="background-color: darkgreen; text-align: center;">
+        <% for(let i = 0; i < dataComment.items.length; i++) {%>
+            <p> <%= dataComment.items[i].snippet.topLevelComment.snippet.textOriginal %></p>
+        <% } %>
+    </div>
+<%}%>
